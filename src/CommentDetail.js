@@ -19,3 +19,8 @@ const CommentDetail = () => {
         </div>
     );
 }
+/**
+ * To be able to use this component in the rest of the app
+ * we have to add an export of it
+ */
+export default CommentDetail;
