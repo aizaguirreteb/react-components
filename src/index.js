@@ -6,22 +6,30 @@ import faker from 'faker';
  * the route to the file. It doesn't have to have the '.js' termination
  */
 import CommentDetail from './CommentDetail';
+import ApprovalCard from './ApprovalCard';
 
 const App = () => {
     return (
         <div className="ui container comments">
-            <CommentDetail author="Sam"
-                timeAgo="Today at 4:45PM"
-                commentText="Great course!"
-                avatar={faker.image.avatar()} />
-            <CommentDetail author="Alex"
-                timeAgo="Today at 2:00PM"
-                commentText="Nice blog" 
-                avatar={faker.image.avatar()}/>
-            <CommentDetail author="Jane"
-                timeAgo="Today at 5:00PM"
-                commentText="Could you do another one?" 
-                avatar={faker.image.avatar()}/>
+            <ApprovalCard>
+                <CommentDetail author="Sam"
+                    timeAgo="Today at 4:45PM"
+                    commentText="Great course!"
+                    avatar={faker.image.avatar()} />
+            </ApprovalCard>
+
+            <ApprovalCard>
+                <CommentDetail author="Alex"
+                    timeAgo="Today at 2:00PM"
+                    commentText="Nice blog"
+                    avatar={faker.image.avatar()} />
+            </ApprovalCard>
+            <ApprovalCard>
+                <CommentDetail author="Jane"
+                    timeAgo="Today at 5:00PM"
+                    commentText="Could you do another one?"
+                    avatar={faker.image.avatar()} />
+            </ApprovalCard>
         </div>
     );
 }
